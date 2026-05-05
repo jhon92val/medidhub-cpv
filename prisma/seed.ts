@@ -157,31 +157,6 @@ async function main() {
     },
   });
 
-  // Assistant Persona
-  const assistantPersona = await prisma.persona.upsert({
-    where: { nacionalidad_cedulaNumero: { nacionalidad: 'V', cedulaNumero: '00000001' } },
-    update: {},
-    create: {
-        primerNombre: 'Asistente',
-        primerApellido: 'de Recepción',
-        nacionalidad: 'V',
-        cedulaNumero: '00000001',
-        fechaNacimiento: new Date(1990, 0, 1),
-        genero: 'Femenino',
-    }
-  });
-
-  await prisma.user.upsert({
-    where: { username: 'asistente' },
-    update: { personaId: assistantPersona.id },
-    create: {
-      id: 2,
-      username: 'asistente',
-      password: hashedPassword,
-      roleId: 7,
-      personaId: assistantPersona.id,
-    },
-  });
   console.log('✅ Users seeded');
 
   // --- Settings ---

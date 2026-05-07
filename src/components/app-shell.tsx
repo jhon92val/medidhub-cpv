@@ -59,50 +59,47 @@ interface MenuItem {
 }
 
 const allMenuOptions: MenuItem[] = [
-  { href: '/dashboard', icon: 'solar:widget-3-bold-duotone', title: 'Panel', permission: '*', group: 'Inicio' },
+  { href: '/dashboard', icon: 'solar:widget-3-bold-duotone', title: 'Panel Principal', permission: '*', group: 'Principal' },
 
-  { href: '/dashboard/sala-de-espera', icon: 'solar:clock-circle-bold-duotone', title: 'Sala de espera', permission: 'waitlist.view', group: 'Atención' },
-  { href: '/dashboard/consulta', icon: 'solar:stethoscope-bold-duotone', title: 'Consulta', permission: 'consultation.perform', group: 'Atención' },
-  { href: '/dashboard/consultas', icon: 'solar:clipboard-list-bold-duotone', title: 'Consultas Realizadas', permission: 'consultation.perform', group: 'Atención' },
-  { href: '/dashboard/hce', icon: 'solar:heart-pulse-bold-duotone', title: 'Historia Clínica', permission: 'hce.view', group: 'Atención' },
-  { href: '/dashboard/bitacora', icon: 'solar:syringe-bold-duotone', title: 'Bitácora Tratamiento', permission: 'treatmentlog.manage', group: 'Atención' },
-  { href: '/dashboard/reintegros', icon: 'solar:document-medicine-bold-duotone', title: 'Evaluación Médica (Reintegro)', permission: 'consultation.perform', group: 'Atención' },
-  { href: '/dashboard/salud-ocupacional', icon: 'solar:mask-h-bold-duotone', title: 'Medicina Ocupacional', permission: 'superuser.only', group: 'Atención' },
+  { href: '/dashboard/sala-de-espera', icon: 'solar:clock-circle-bold-duotone', title: 'Sala de Espera', permission: 'waitlist.view', group: 'Atención Médica' },
+  { href: '/dashboard/consulta', icon: 'solar:stethoscope-bold-duotone', title: 'Nueva Consulta', permission: 'consultation.perform', group: 'Atención Médica' },
+  { href: '/dashboard/consultas', icon: 'solar:clipboard-list-bold-duotone', title: 'Historial de Consultas', permission: 'consultation.perform', group: 'Atención Médica' },
+  { href: '/dashboard/hce', icon: 'solar:heart-pulse-bold-duotone', title: 'Historia Clínica (HCE)', permission: 'hce.view', group: 'Atención Médica' },
+  { href: '/dashboard/bitacora', icon: 'solar:syringe-bold-duotone', title: 'Bitácora de Tratamiento', permission: 'treatmentlog.manage', group: 'Atención Médica' },
+  { href: '/dashboard/recipe-blanco', icon: 'solar:printer-minimalistic-bold-duotone', title: 'Formatos en Blanco', permission: 'blankformats.print', group: 'Atención Médica' },
 
-  { href: '/dashboard/personas', icon: 'solar:user-bold-duotone', title: 'Personas', permission: 'people.manage', group: 'Admisión' },
-  { href: '/dashboard/buscador-pacientes', icon: Search, title: 'Directorio', permission: 'directory.search', group: 'Admisión' },
-  { href: '/dashboard/historial-medico', icon: FileClock, title: 'Historial Médico', permission: 'medicalhistory.view', group: 'Admisión' },
-  { href: '/dashboard/hce', icon: FileText, title: 'HCE (Archivos)', permission: 'hce.view', group: 'Admisión' },
-  { href: '/dashboard/recipe-blanco', icon: 'solar:printer-minimalistic-bold-duotone', title: 'Formatos en Blanco', permission: 'blankformats.print', group: 'Admisión' },
-  { href: '/dashboard/lista-pacientes', icon: 'solar:users-group-rounded-bold-duotone', title: 'Lista de Pacientes', permission: 'patientlist.view', group: 'Admisión' },
-  { href: '/dashboard/pacientes', icon: 'solar:shield-user-bold-duotone', title: 'Titulares', permission: 'titulars.manage', group: 'Admisión' },
-  { href: '/dashboard/beneficiarios', icon: 'solar:users-group-two-rounded-bold-duotone', title: 'Beneficiarios', permission: 'beneficiaries.manage', group: 'Admisión' },
+  { href: '/dashboard/buscador-pacientes', icon: Search, title: 'Buscador de Pacientes', permission: 'directory.search', group: 'Pacientes' },
+  { href: '/dashboard/pacientes', icon: 'solar:shield-user-bold-duotone', title: 'Gestión de Titulares', permission: 'titulars.manage', group: 'Pacientes' },
+  { href: '/dashboard/beneficiarios', icon: 'solar:users-group-two-rounded-bold-duotone', title: 'Gestión de Beneficiarios', permission: 'beneficiaries.manage', group: 'Pacientes' },
+  { href: '/dashboard/personas', icon: 'solar:user-bold-duotone', title: 'Directorio de Personas', permission: 'people.manage', group: 'Pacientes' },
+  { href: '/dashboard/historial-medico', icon: FileClock, title: 'Archivo Médico', permission: 'medicalhistory.view', group: 'Pacientes' },
 
-  { href: '/dashboard/empresas', icon: 'solar:city-bold-duotone', title: 'Empresas', permission: 'companies.manage', group: 'Parametrización' },
-  { href: '/dashboard/puestos', icon: 'solar:case-minimalistic-bold-duotone', title: 'Puestos de Trabajo', permission: 'jobpositions.manage', group: 'Parametrización' },
-  { href: '/dashboard/cie10', icon: 'solar:notebook-bold-duotone', title: 'Catálogo CIE-10', permission: 'cie10.manage', group: 'Parametrización' },
-  { href: '/dashboard/servicios', icon: 'solar:server-square-bold-duotone', title: 'Catálogo de Servicios', permission: 'settings.manage', group: 'Parametrización' },
-  { href: '/dashboard/especialidades', icon: 'solar:diploma-bold-duotone', title: 'Especialidades', permission: 'specialties.manage', group: 'Parametrización' },
-  { href: '/dashboard/doctores', icon: 'solar:users-group-rounded-bold-duotone', title: 'Doctores', permission: 'specialties.manage', group: 'Parametrización' },
-  { href: '/dashboard/apariencia', icon: 'solar:palette-bold-duotone', title: 'Apariencia', permission: 'settings.manage', group: 'Parametrización' },
+  { href: '/dashboard/salud-ocupacional', icon: 'solar:mask-h-bold-duotone', title: 'Medicina Ocupacional', permission: 'superuser.only', group: 'Salud Ocupacional' },
+  { href: '/dashboard/reintegros', icon: 'solar:document-medicine-bold-duotone', title: 'Evaluaciones (Reintegro)', permission: 'consultation.perform', group: 'Salud Ocupacional' },
 
+  { href: '/dashboard/reportes', icon: 'solar:chart-2-bold-duotone', title: 'Estadísticas Generales', permission: 'reports.view', group: 'Reportes y Analítica' },
+  { href: '/dashboard/reporte-pacientes', icon: 'solar:clipboard-check-bold-duotone', title: 'Reporte Detallado', permission: 'reports.view', group: 'Reportes y Analítica' },
 
-  { href: '/dashboard/reportes', icon: 'solar:chart-2-bold-duotone', title: 'Reportes', permission: 'reports.view', group: 'Analítica' },
-  { href: '/dashboard/reporte-pacientes', icon: 'solar:clipboard-check-bold-duotone', title: 'Reporte de Pacientes', permission: 'reports.view', group: 'Analítica' },
+  { href: '/dashboard/cie10', icon: 'solar:notebook-bold-duotone', title: 'Catálogo CIE-10', permission: 'cie10.manage', group: 'Configuración' },
+  { href: '/dashboard/servicios', icon: 'solar:server-square-bold-duotone', title: 'Servicios Médicos', permission: 'settings.manage', group: 'Configuración' },
+  { href: '/dashboard/especialidades', icon: 'solar:diploma-bold-duotone', title: 'Especialidades', permission: 'specialties.manage', group: 'Configuración' },
+  { href: '/dashboard/doctores', icon: 'solar:users-group-rounded-bold-duotone', title: 'Médicos y Especialistas', permission: 'specialties.manage', group: 'Configuración' },
+  { href: '/dashboard/empresas', icon: 'solar:city-bold-duotone', title: 'Empresas Afiliadas', permission: 'companies.manage', group: 'Configuración' },
+  { href: '/dashboard/puestos', icon: 'solar:case-minimalistic-bold-duotone', title: 'Puestos de Trabajo', permission: 'jobpositions.manage', group: 'Configuración' },
 
-  { href: '/dashboard/usuarios', icon: 'solar:user-rounded-bold-duotone', title: 'Usuarios', permission: 'users.manage', group: 'Seguridad' },
-  { href: '/dashboard/seguridad/roles', icon: 'solar:key-minimalistic-bold-duotone', title: 'Roles', permission: 'roles.manage', group: 'Seguridad' },
-  { href: '/dashboard/db-explorer', icon: 'solar:database-bold-duotone', title: 'Explorador DB', permission: 'database.view', group: 'Seguridad' },
-
-  { href: '/dashboard/informacion', icon: 'solar:info-circle-bold-duotone', title: 'Información', permission: '*', group: 'Ayuda' },
+  { href: '/dashboard/usuarios', icon: 'solar:user-rounded-bold-duotone', title: 'Gestión de Usuarios', permission: 'users.manage', group: 'Sistema' },
+  { href: '/dashboard/seguridad/roles', icon: 'solar:key-minimalistic-bold-duotone', title: 'Permisos y Roles', permission: 'roles.manage', group: 'Sistema' },
+  { href: '/dashboard/db-explorer', icon: 'solar:database-bold-duotone', title: 'Mantenimiento DB', permission: 'database.view', group: 'Sistema' },
+  { href: '/dashboard/apariencia', icon: 'solar:palette-bold-duotone', title: 'Personalización', permission: 'settings.manage', group: 'Sistema' },
+  { href: '/dashboard/informacion', icon: 'solar:info-circle-bold-duotone', title: 'Acerca del Sistema', permission: '*', group: 'Sistema' },
 ];
 
-const menuGroups = ['Inicio', 'Atención', 'Admisión', 'Parametrización', 'Analítica', 'Seguridad', 'Ayuda'];
+const menuGroups = ['Principal', 'Atención Médica', 'Pacientes', 'Salud Ocupacional', 'Reportes y Analítica', 'Configuración', 'Sistema'];
 
 // Helper to get theme colors based on group for Dark Mode "Neon" look
 const getGroupTheme = (group: string | undefined) => {
   switch (group) {
-    case 'Inicio': return {
+    case 'Principal': return {
       gradient: 'from-blue-400 via-blue-600 to-indigo-700',
       darkActiveBg: 'dark:data-[active=true]:bg-blue-500/10 dark:data-[active=true]:border-blue-400/30 dark:data-[active=true]:shadow-[0_0_20px_rgba(59,130,246,0.15)]',
       darkHoverBg: 'dark:hover:bg-blue-500/5',
@@ -110,7 +107,7 @@ const getGroupTheme = (group: string | undefined) => {
       darkIcon: 'text-blue-100 dark:text-neon-blue drop-shadow-blue',
       darkIconBg: 'dark:bg-blue-500/20'
     };
-    case 'Atención': return {
+    case 'Atención Médica': return {
       gradient: 'from-cyan-400 via-cyan-600 to-blue-700',
       darkActiveBg: 'dark:data-[active=true]:bg-cyan-500/10 dark:data-[active=true]:border-cyan-400/30 dark:data-[active=true]:shadow-[0_0_20px_rgba(6,182,212,0.15)]',
       darkHoverBg: 'dark:hover:bg-cyan-500/5',
@@ -118,7 +115,7 @@ const getGroupTheme = (group: string | undefined) => {
       darkIcon: 'text-cyan-100 dark:text-cyan-400 drop-shadow-glow',
       darkIconBg: 'dark:bg-cyan-500/20'
     };
-    case 'Admisión': return {
+    case 'Pacientes': return {
       gradient: 'from-emerald-400 via-emerald-600 to-teal-800',
       darkActiveBg: 'dark:data-[active=true]:bg-emerald-500/10 dark:data-[active=true]:border-emerald-400/30 dark:data-[active=true]:shadow-[0_0_20px_rgba(16,185,129,0.15)]',
       darkHoverBg: 'dark:hover:bg-emerald-500/5',
@@ -126,7 +123,15 @@ const getGroupTheme = (group: string | undefined) => {
       darkIcon: 'text-emerald-100 dark:text-neon-emerald drop-shadow-emerald',
       darkIconBg: 'dark:bg-emerald-500/20'
     };
-    case 'Parametrización': return {
+    case 'Salud Ocupacional': return {
+      gradient: 'from-amber-400 via-orange-500 to-red-600',
+      darkActiveBg: 'dark:data-[active=true]:bg-amber-500/10 dark:data-[active=true]:border-amber-400/30 dark:data-[active=true]:shadow-[0_0_20px_rgba(245,158,11,0.15)]',
+      darkHoverBg: 'dark:hover:bg-amber-500/5',
+      darkText: 'dark:text-amber-300 dark:font-black',
+      darkIcon: 'text-amber-100 dark:text-amber-400 drop-shadow-glow',
+      darkIconBg: 'dark:bg-amber-500/20'
+    };
+    case 'Configuración': return {
       gradient: 'from-violet-400 via-purple-600 to-indigo-800',
       darkActiveBg: 'dark:data-[active=true]:bg-purple-500/10 dark:data-[active=true]:border-purple-400/30 dark:data-[active=true]:shadow-[0_0_20px_rgba(168,85,247,0.15)]',
       darkHoverBg: 'dark:hover:bg-purple-500/5',
@@ -134,7 +139,7 @@ const getGroupTheme = (group: string | undefined) => {
       darkIcon: 'text-purple-100 dark:text-neon-purple drop-shadow-purple',
       darkIconBg: 'dark:bg-purple-500/20'
     };
-    case 'Analítica': return {
+    case 'Reportes y Analítica': return {
       gradient: 'from-fuchsia-400 via-pink-600 to-rose-800',
       darkActiveBg: 'dark:data-[active=true]:bg-pink-500/10 dark:data-[active=true]:border-pink-400/30 dark:data-[active=true]:shadow-[0_0_20px_rgba(236,72,153,0.15)]',
       darkHoverBg: 'dark:hover:bg-pink-500/5',
@@ -142,21 +147,13 @@ const getGroupTheme = (group: string | undefined) => {
       darkIcon: 'text-pink-100 dark:text-neon-rose drop-shadow-rose',
       darkIconBg: 'dark:bg-pink-500/20'
     };
-    case 'Seguridad': return {
+    case 'Sistema': return {
       gradient: 'from-rose-400 via-red-600 to-orange-800',
       darkActiveBg: 'dark:data-[active=true]:bg-red-500/10 dark:data-[active=true]:border-red-400/30 dark:data-[active=true]:shadow-[0_0_20px_rgba(239,68,68,0.15)]',
       darkHoverBg: 'dark:hover:bg-red-500/5',
       darkText: 'dark:text-red-300 dark:font-black',
       darkIcon: 'text-red-100 dark:text-neon-rose drop-shadow-rose',
       darkIconBg: 'dark:bg-red-500/20'
-    };
-    case 'Ayuda': return {
-      gradient: 'from-amber-400 via-orange-500 to-red-600',
-      darkActiveBg: 'dark:data-[active=true]:bg-amber-500/10 dark:data-[active=true]:border-amber-400/30 dark:data-[active=true]:shadow-[0_0_20px_rgba(245,158,11,0.15)]',
-      darkHoverBg: 'dark:hover:bg-amber-500/5',
-      darkText: 'dark:text-amber-300 dark:font-black',
-      darkIcon: 'text-amber-100 dark:text-amber-400 drop-shadow-glow',
-      darkIconBg: 'dark:bg-amber-500/20'
     };
     default: return {
       gradient: 'from-slate-400 to-slate-700',
